@@ -1,6 +1,13 @@
 {% extends "blog/base.html" %}
 
 {% block content %}
-  <h1>Test!</h1>
-  <p>Blog post body would go here!</p>
+<div class="jumbotron">
+  <h1><b>Nick's Code Insights</b></h1>
+</div
+<div id="posts">
+  {% for blog_post in blog_posts %}
+    <h2><b>{{blog_post.title}}</b></h1>
+    <p>{{blog_post.content}}</p>
+  {% endfor %}
+</div>
 {% endblock %}
